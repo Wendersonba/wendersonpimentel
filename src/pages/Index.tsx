@@ -198,18 +198,40 @@ const Index = () => {
       <Section variant="colored">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-8">
-            O Que Estão Dizendo
+            Histórias de Transformação
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <TestimonialCard 
-              quote="Consegui perder 8 kg em 2 meses só com as dicas do eBook. Muito claro e fácil de seguir!"
-              author="Mariana S."
-            />
-            <TestimonialCard 
-              quote="Aprendi a montar minhas marmitas no domingo e parei de gastar dinheiro à toa durante a semana."
-              author="Carlos A."
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "Mudei completamente minha relação com a alimentação. Perdi 12kg, ganhei energia e hoje me sinto mais forte na academia.",
+                author: "Mariana S., 28 anos",
+                details: "Emagrecimento e Condicionamento"
+              },
+              {
+                quote: "Depois de anos tentando, finalmente encontrei um guia prático que me ajudou a organizar minhas refeições. Ganhei massa muscular sem gastar muito.",
+                author: "Carlos A., 35 anos",
+                details: "Hipertrofia e Planejamento"
+              },
+              {
+                quote: "Aprendi a fazer escolhas inteligentes sem me sentir restrito. Melhorei minha performance nos treinos e me sinto mais disposto.",
+                author: "João P., 42 anos",
+                details: "Nutrição e Performance"
+              }
+            ].map((testimonial, i) => (
+              <div 
+                key={i} 
+                className="bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <p className="italic text-gray-700 mb-4 text-lg">
+                  "{testimonial.quote}"
+                </p>
+                <div className="mt-4">
+                  <p className="font-bold text-gray-900">{testimonial.author}</p>
+                  <p className="text-sm text-gray-600">{testimonial.details}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
