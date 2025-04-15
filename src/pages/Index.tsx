@@ -297,10 +297,21 @@ const Index = () => {
           
           <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
             <p className="text-lg font-medium">
-              <span className="line-through opacity-70">De R$ 97,90</span> por apenas{" "}
-              <span className="text-2xl font-bold">R$ 47,90</span>
+              <span className="line-through opacity-70">De R$ 49,90</span> por apenas{" "}
+              <span className="text-2xl font-bold">R$ 19,90</span>
             </p>
             <p className="text-sm mt-1">(Pagamento seguro e acesso imediato)</p>
+          </div>
+          
+          <div className="mt-4 space-y-2">
+            <div className="flex items-center justify-center space-x-2 bg-white/10 p-3 rounded-lg">
+              <ShieldCheck size={24} className="text-green-400" />
+              <span>Garantia de 7 dias</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 bg-white/10 p-3 rounded-lg">
+              <Gift size={24} className="text-accent" />
+              <span>Bônus exclusivos incluídos</span>
+            </div>
           </div>
         </div>
       </Section>
