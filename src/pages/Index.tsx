@@ -1,8 +1,8 @@
-
 import { Section } from "@/components/ui/section";
 import { CTAButton } from "@/components/ui/cta-button";
 import { FeatureList, FeatureItem } from "@/components/feature-list";
 import { TestimonialCard } from "@/components/testimonial-card";
+import { AnimatedHero } from "@/components/animated-hero";
 import { 
   Check, 
   BookOpen, 
@@ -18,6 +18,7 @@ import {
   Gift,
   ArrowRight
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Index = () => {
   return (
@@ -26,31 +27,46 @@ const Index = () => {
       <Section className="py-16 md:py-24 bg-gradient-to-r from-secondary to-secondary/50">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
-              Transforme Sua Alimentação e Alcance Seus Objetivos
-              <span className="block text-primary mt-2">
-                de Forma Simples, Barata e Sustentável
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+                Transforme Sua Alimentação e Alcance Seus Objetivos
+                <span className="block text-primary mt-2">
+                  de Forma Simples, Barata e Sustentável
+                </span>
+              </h1>
+            </motion.div>
+            <motion.p 
+              className="text-lg md:text-xl text-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               Um guia prático e direto para perder peso, ganhar saúde ou alcançar a hipertrofia, 
               mesmo com pouco tempo e orçamento limitado.
-            </p>
-            <div className="pt-4">
+            </motion.p>
+            <motion.div 
+              className="pt-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               <CTAButton size="lg">
                 Quero Mudar Minha Alimentação Agora
               </CTAButton>
-            </div>
+            </motion.div>
           </div>
-          <div className="relative h-64 md:h-full">
-            <div className="absolute inset-0 bg-gray-200 rounded-xl overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                alt="Ebook de reeducação alimentar" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="relative h-64 md:h-full"
+          >
+            <AnimatedHero />
+          </motion.div>
         </div>
       </Section>
 
