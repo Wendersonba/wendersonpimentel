@@ -204,18 +204,18 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "Mudei completamente minha relação com a alimentação. Perdi 12kg, ganhei energia e hoje me sinto mais forte na academia.",
-                author: "Mariana S., 28 anos",
+                quote: "Mudei completamente minha relação com a alimentação. Perdi 6 kg em 40 dias, ganhei energia e hoje me sinto mais forte na academia.",
+                author: "Mariana S.",
                 details: "Emagrecimento e Condicionamento"
               },
               {
                 quote: "Depois de anos tentando, finalmente encontrei um guia prático que me ajudou a organizar minhas refeições. Ganhei massa muscular sem gastar muito.",
-                author: "Carlos A., 35 anos",
+                author: "Carlos A.",
                 details: "Hipertrofia e Planejamento"
               },
               {
                 quote: "Aprendi a fazer escolhas inteligentes sem me sentir restrito. Melhorei minha performance nos treinos e me sinto mais disposto.",
-                author: "João P., 42 anos",
+                author: "João P.",
                 details: "Nutrição e Performance"
               }
             ].map((testimonial, i) => (
