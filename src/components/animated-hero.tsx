@@ -30,10 +30,10 @@ export function AnimatedHero({ className }: AnimatedHeroProps) {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]);
 
   return (
-    <div className="relative h-full w-full rounded-xl overflow-hidden">
+    <div className={`relative h-full w-full rounded-xl overflow-hidden ${className}`}>
       {images.map((image, index) => (
         <motion.div
           key={image.url}
