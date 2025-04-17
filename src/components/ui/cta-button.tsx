@@ -8,6 +8,7 @@ interface CTAButtonProps {
   onClick?: () => void;
   size?: "default" | "lg";
   variant?: "primary" | "accent";
+  href?: string;
 }
 
 export function CTAButton({
@@ -16,9 +17,12 @@ export function CTAButton({
   onClick,
   size = "default",
   variant = "primary",
+  href,
 }: CTAButtonProps) {
+  const ButtonComponent = href ? "a" : "button";
+  
   return (
-    <button
+    <ButtonComponent
       className={cn(
         "font-medium rounded-lg transition-colors shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2",
         size === "default" && "px-6 py-3 text-base",
@@ -28,8 +32,11 @@ export function CTAButton({
         className
       )}
       onClick={onClick}
+      href={href}
+      target={href ? "_blank" : undefined}
+      rel={href ? "noopener noreferrer" : undefined}
     >
       {children}
-    </button>
+    </ButtonComponent>
   );
 }

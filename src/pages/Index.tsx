@@ -1,3 +1,4 @@
+
 import { Section } from "@/components/ui/section";
 import { CTAButton } from "@/components/ui/cta-button";
 import { FeatureList, FeatureItem } from "@/components/feature-list";
@@ -19,6 +20,9 @@ import {
   ArrowRight
 } from "lucide-react";
 import { motion } from "framer-motion";
+
+// Link de pagamento Hotmart
+const PAYMENT_LINK = "https://pay.hotmart.com/B99182766G?bid=1744885769238";
 
 const Index = () => {
   return (
@@ -54,7 +58,7 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <CTAButton size="lg">
+              <CTAButton size="lg" href={PAYMENT_LINK}>
                 Quero Mudar Minha Alimentação Agora
               </CTAButton>
             </motion.div>
@@ -67,6 +71,15 @@ const Index = () => {
           >
             <AnimatedHero />
           </motion.div>
+        </div>
+      </Section>
+
+      {/* Author Information */}
+      <Section className="py-6 bg-gray-50">
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-gray-900">Wenderson Pimentel</h3>
+          <p className="text-lg text-gray-700">Educador Físico</p>
+          <p className="text-md text-gray-600">CREF: 016358-G/BA</p>
         </div>
       </Section>
 
@@ -288,6 +301,7 @@ const Index = () => {
             size="lg" 
             variant="accent"
             className="group"
+            href={PAYMENT_LINK}
           >
             <span className="flex items-center">
               Quero o Meu eBook Agora!
