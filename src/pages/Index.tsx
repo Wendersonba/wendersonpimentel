@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Section } from "@/components/ui/section";
 import { CTAButton } from "@/components/ui/cta-button";
 import { FeatureList, FeatureItem } from "@/components/feature-list";
 import { TestimonialCard } from "@/components/testimonial-card";
+import { AnimatedBook } from "@/components/animated-book";
 import { 
   Check, 
   BookOpen, 
@@ -66,11 +68,11 @@ const Index = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative h-64 md:h-full bg-white rounded-xl shadow-md flex items-center justify-center"
+            className="relative h-auto md:h-[500px] flex items-center justify-center p-6"
           >
-            <p className="text-xl text-gray-700 text-center">
-              Imagem do Livro
-            </p>
+            <div className="w-full max-w-[350px] mx-auto">
+              <AnimatedBook />
+            </div>
           </motion.div>
         </div>
       </Section>
@@ -259,8 +261,10 @@ const Index = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             <div className="lg:col-span-2">
-              <div className="h-[400px] w-full px-4">
-                Imagem do Livro
+              <div className="h-[400px] w-full px-4 flex items-center justify-center">
+                <div className="w-full max-w-[300px]">
+                  <AnimatedBook />
+                </div>
               </div>
             </div>
             <div className="lg:col-span-3">

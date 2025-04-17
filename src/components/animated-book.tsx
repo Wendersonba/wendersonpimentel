@@ -16,7 +16,7 @@ export function AnimatedBook() {
         className="w-full h-full"
       >
         <img 
-          src="/lovable-uploads/129ab128-6e2c-4a19-8e4d-39b58e8add71.png"
+          src="/lovable-uploads/f90ff6ef-1ed1-4dfc-83db-df30627359a1.png"
           alt="Livro Corpo Leve Vida Ativa"
           className="w-full h-auto object-contain shadow-xl rounded-md"
         />
