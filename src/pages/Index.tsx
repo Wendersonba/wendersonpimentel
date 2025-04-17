@@ -4,6 +4,7 @@ import { CTAButton } from "@/components/ui/cta-button";
 import { FeatureList, FeatureItem } from "@/components/feature-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { AnimatedHero } from "@/components/animated-hero";
+import { AnimatedBook } from "@/components/animated-book";
 import { 
   Check, 
   BookOpen, 
@@ -256,32 +257,41 @@ const Index = () => {
             Ao adquirir o eBook, você também leva:
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: <List size={40} />,
-                text: "Lista de compras inteligente (imprimível)"
-              },
-              {
-                icon: <FileText size={40} />,
-                text: "Planner semanal de refeições (editável)"
-              },
-              {
-                icon: <BookOpen size={40} />,
-                text: "Links úteis e aplicativos recomendados"
-              },
-              {
-                icon: <Star size={40} />,
-                text: "QR Code com vídeos e dicas exclusivas no Instagram"
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                <div className="text-accent mb-4">
-                  {item.icon}
-                </div>
-                <p className="text-md font-medium">{item.text}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div className="lg:col-span-2">
+              <div className="h-[400px] w-full px-4">
+                <AnimatedBook />
               </div>
-            ))}
+            </div>
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  {
+                    icon: <List size={40} />,
+                    text: "Lista de compras inteligente (imprimível)"
+                  },
+                  {
+                    icon: <FileText size={40} />,
+                    text: "Planner semanal de refeições (editável)"
+                  },
+                  {
+                    icon: <BookOpen size={40} />,
+                    text: "Links úteis e aplicativos recomendados"
+                  },
+                  {
+                    icon: <Star size={40} />,
+                    text: "QR Code com vídeos e dicas exclusivas no Instagram"
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <div className="text-accent mb-4">
+                      {item.icon}
+                    </div>
+                    <p className="text-md font-medium">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </Section>

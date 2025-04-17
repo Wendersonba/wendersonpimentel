@@ -12,16 +12,16 @@ export function AnimatedHero({ className }: AnimatedHeroProps) {
   
   const images = [
     {
+      url: "/lovable-uploads/129ab128-6e2c-4a19-8e4d-39b58e8add71.png",
+      alt: "Livro Corpo Leve Vida Ativa"
+    },
+    {
       url: "https://images.unsplash.com/photo-1606914501449-5a96b6ce24ca?w=800&auto=format&fit=crop&q=80",
       alt: "Marmitas saudáveis organizadas"
     },
     {
       url: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&auto=format&fit=crop&q=80",
       alt: "Mesa com alimentos saudáveis"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&auto=format&fit=crop&q=80",
-      alt: "Preparação de refeições saudáveis"
     }
   ];
 
