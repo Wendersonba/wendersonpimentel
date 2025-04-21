@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Section } from "@/components/ui/section";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -318,7 +317,7 @@ const Index = () => {
             href={PAYMENT_LINK}
           >
             <span className="flex items-center">
-              Quero o Meu eBook Agora!
+              Quero mudar agora mesmo!
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </span>
           </CTAButton>
@@ -326,7 +325,7 @@ const Index = () => {
           <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
             <p className="text-lg font-medium">
               <span className="line-through opacity-70">De R$ 49,90</span> por apenas{" "}
-              <span className="text-2xl font-bold">R$ 19,90</span>
+              <span className="text-2xl font-bold">R$ 24,70</span>
             </p>
             <p className="text-sm mt-1">(Pagamento seguro e acesso imediato)</p>
           </div>
