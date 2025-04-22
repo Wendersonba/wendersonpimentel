@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Link de pagamento Hotmart
 const PAYMENT_LINK = "https://pay.hotmart.com/B99182766G?bid=1744885769238";
 
 const Index = () => {
@@ -59,7 +58,7 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <CTAButton size="lg" href={PAYMENT_LINK}>
-                Quero Mudar Minha Alimentação Agora
+                Mudar minha alimentação
               </CTAButton>
             </motion.div>
           </div>
@@ -317,7 +316,7 @@ const Index = () => {
             href={PAYMENT_LINK}
           >
             <span className="flex items-center">
-              Quero mudar agora mesmo!
+              Mudar minha alimentação
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </span>
           </CTAButton>
@@ -325,7 +324,7 @@ const Index = () => {
           <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
             <p className="text-lg font-medium">
               <span className="line-through opacity-70">De R$ 49,90</span> por apenas{" "}
-              <span className="text-2xl font-bold">R$ 24,70</span>
+              <span className="text-2xl font-bold">R$ 29,90</span>
             </p>
             <p className="text-sm mt-1">(Pagamento seguro e acesso imediato)</p>
           </div>
